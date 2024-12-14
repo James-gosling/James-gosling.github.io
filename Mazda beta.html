@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendedora de Mazda en Querétaro</title>
+    <meta name="description" content="Tu vendedora de confianza para los mejores autos Mazda en Querétaro.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .cta-button {
+            transition: transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-image {
+            transition: transform 0.3s ease;
+        }
+
+        .feature-image:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="flex items-center">
+                <img src="https://storage.googleapis.com/a1aa/image/f8hwdS2tl41ub6i8Xrug4TxfzmJWLfbwkfueND33TqNhpwveE.jpg"
+                    alt="Mazda Logo" class="h-12">
+                <span class="ml-2 text-xl font-bold text-gray-800">Mazda Querétaro</span>
+            </div>
+            <nav class="space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-red-500">Sobre Mí</a>
+                <a href="#services" class="text-gray-600 hover:text-red-500">Servicios</a>
+                <a href="#catalogo" class="text-gray-600 hover:text-red-500">Catálogo</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-red-500">Testimonios</a>
+                <a href="#contact" class="text-gray-600 hover:text-red-500">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-center h-screen"
+        style="background-image: url('https://storage.googleapis.com/a1aa/image/p5M4qrPXZtrHMddGCesqhONTU6k8AYZbCXCPZb2AfexvK8rnA.jpg');">
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+            <div class="text-center text-white">
+                <h1 class="text-5xl font-bold">Bienvenidos a Mazda Querétaro</h1>
+                <p class="mt-4 text-lg">Encuentra el vehículo perfecto que cumpla con tus necesidades.</p>
+                <a href="#contact"
+                    class="cta-button mt-6 inline-block bg-red-500 text-white py-3 px-8 rounded-lg shadow-md">Contáctame</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold text-gray-800">Sobre Mí</h2>
+                <p class="mt-4 text-gray-600">Soy una vendedora dedicada con más de 10 años de experiencia en la
+                    industria automotriz, especializada en autos Mazda. Mi objetivo es ayudarte a encontrar el vehículo
+                    perfecto que cumpla con tus necesidades y supere tus expectativas.</p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://storage.googleapis.com/a1aa/image/c6ea25f4-afc6-4e0c-9ebb-a599b66f5011.jpeg"
+                    alt="Vendedora profesional" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800">Servicios</h2>
+            <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
+                <a href="#catalogo" class="block p-6 bg-gray-100 rounded-lg shadow-md">
+                    <img src="https://www.narcitymedia.com/hubfs/mazda.jpg" alt="Venta de Autos"
+                        class="mx-auto feature-image">
+                    <h3 class="mt-4 text-xl font-bold text-gray-800">Venta de Autos</h3>
+                    <p class="mt-2 text-gray-600">Encuentra la mejor selección de vehículos Mazda nuevos y seminuevos.
+                    </p>
+                </a>
+                <a href="https://www.mazdafinancialservices.com/us/en.html" target="_blank"
+                    class="block p-6 bg-gray-100 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/a1aa/image/6SeJn1SDZhUCAyteOq8jJUPsFhYF1myX91bH7VIugMVLFernA.jpg"
+                        alt="Opciones de Financiamiento" class="mx-auto feature-image">
+                    <h3 class="mt-4 text-xl font-bold text-gray-800">Opciones de Financiamiento</h3>
+                    <p class="mt-2 text-gray-600">Obtén soluciones de financiamiento flexibles y adaptadas a tu
+                        presupuesto.</p>
+                </a>
+                <a href="tel:4423093500" class="block p-6 bg-gray-100 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/a1aa/image/GffHxqctdfEdaoFMQyQVfvewdaIsd00wl7buAR004fkZVhf6JA.jpg"
+                        alt="Soporte al Cliente" class="mx-auto feature-image">
+                    <h3 class="mt-4 text-xl font-bold text-gray-800">Soporte al Cliente</h3>
+                    <p class="mt-2 text-gray-600">Asistencia profesional antes, durante y después de tu compra.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalogo" class="py-20 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800">Catálogo de Autos Mazda</h2>
+            <p class="mt-4 text-gray-600">Explora nuestra amplia gama de vehículos Mazda para cada estilo de vida.</p>
+            <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://www.mazda.mx/siteassets/descargables-2025/mazda2-sedan/ficha-tecnica/mazda2-sedan.jpg"
+                        alt="Mazda 2 Sedán" class="rounded-lg mx-auto">
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda 2 Sedán</h3>
+                    <p class="text-gray-600">Desde $330,900 MXN</p>
+                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda2-sedan/ficha-tecnica/ficha-tecnica-mazda2-sedan-2025-v01.pdf"
+                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://www.mazda.mx/siteassets/descargables-2025/mazda2-hatchback/ficha-tecnica/mazda2-hatchback.jpg"
+                        alt="Mazda 2 Hatchback" class="rounded-lg mx-auto">
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda 2 Hatchback</h3>
+                    <p class="text-gray-600">Desde $345,900 MXN</p>
+                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda2-hatchback/ficha-tecnica/ficha-tecnica-mazda2-hatchback-2025-v01.pdf"
+                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://www.mazda.mx/siteassets/descargables-2025/mazda3-sedan/ficha-tecnica/mazda3-sedan.jpg"
+                        alt="Mazda 3 Sedán" class="rounded-lg mx-auto">
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda 3 Sedán</h3>
+                    <p class="text-gray-600">Desde $420,900 MXN</p>
+                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda3-sedan/ficha-tecnica/ficha-tecnica-mazda3-sedan-2025-v01.pdf"
+                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://www.mazda.mx/siteassets/descargables-2025/mazda3-hatchback/ficha-tecnica/mazda3-hatchback.jpg"
+                        alt="Mazda 3 Hatchback" class="rounded-lg mx-auto">
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda 3 Hatchback</h3>
+                    <p class="text-gray-600">Desde $430,900 MXN</p>
+                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda3-hatchback/ficha-tecnica/ficha-tecnica-mazda3-hatchback-2025-v01.pdf"
+                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-30/ficha-tecnica/mazda-cx-30.jpg"
+                        alt="Mazda CX-30" class="rounded-lg mx-auto">
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda CX-30</h3>
+                    <p class="text-gray-600">Desde $480,900 MXN</p>
+                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-30/ficha-tecnica/ficha-tecnica-mazda-cx-30-2025-v02.pdf"
+                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-5/ficha-tecnica/mazda-cx-5.jpg"
+                        alt="Mazda CX-5" class="rounded-lg mx-auto">
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda CX-5</h3>
+                    <p class="text-gray-600">Desde $570,900 MXN</p>
+                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-5/ficha-tecnica/ficha-tecnica-mazda-cx-5-2025-v01.pdf"
+                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-50/ficha-tecnica/mazda-cx-50.jpg"
+                        alt="Mazda CX-50" class="rounded-lg mx-auto">
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda CX-50</h3>
+                    <p class="text-gray-600">Desde $650,900 MXN</p>
+                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-50/ficha-tecnica/ficha-tecnica-mazda-cx-50-2025-v01.pdf"
+                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-70/ficha-tecnica/mazda-cx-70.jpg"
+                        alt="Mazda CX-70" class="rounded-lg mx-auto">
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda CX-70</h3>
+                    <p class="text-gray-600">Desde $700,900 MXN</p>
+                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-70/ficha-tecnica/ficha-tecnica-mazda-cx-70-2025-v01.pdf"
+                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-90/ficha-tecnica/mazda-cx-90.jpg"
+                        alt="Mazda CX-90" class="rounded-lg mx-auto">
+                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda CX-90</h3>
+                    <p class="text-gray-600">Desde $850,900 MXN</p>
+                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-90/ficha-tecnica/ficha-tecnica-mazda-cx-90-2025-v01.pdf"
+                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800">Testimonios</h2>
+            <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/a1aa/image/fb27e664-f581-4495-a114-e128731a291d.jpeg"
+                        alt="Cliente 1" class="mx-auto rounded-full">
+                    <p class="mt-4 text-gray-600">"¡La mejor experiencia al comprar mi auto! Altamente recomendable."
+                    </p>
+                    <p class="mt-2 font-bold text-gray-800">- Juan Pérez</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/a1aa/image/76471f39-7530-4139-8934-99b66d4fd34c.jpeg"
+                        alt="Cliente 2" class="mx-auto rounded-full">
+                    <p class="mt-4 text-gray-600">"Excelentes ofertas y un servicio impecable."</p>
+                    <p class="mt-2 font-bold text-gray-800">- María López</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/a1aa/image/65c62d22-8eb5-4dea-b7dc-6935b7daf0a4.jpeg"
+                        alt="Cliente 3" class="mx-auto rounded-full">
+                    <p class="mt-4 text-gray-600">"Hicieron que el proceso de compra fuera sencillo y agradable."</p>
+                    <p class="mt-2 font-bold text-gray-800">- Miguel Hernández</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800">Contáctame</h2>
+            <p class="mt-4 text-gray-600">¡Déjame ayudarte a encontrar tu próximo auto Mazda!</p>
+            <form class="mt-8 max-w-lg mx-auto">
+                <div class="mb-4">
+                    <input type="text" placeholder="Tu Nombre" class="w-full p-3 rounded-lg border border-gray-300"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Tu Correo Electrónico"
+                        class="w-full p-3 rounded-lg border border-gray-300" required>
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Tu Mensaje" class="w-full p-3 rounded-lg border border-gray-300"
+                        required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-red-500 text-white py-3 px-6 rounded-lg">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto text-center text-white">
+            <p>© 2023 Mazda Querétaro. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://www.facebook.com/MazdaQueretaroBajio" target="_blank"
+                    class="text-white hover:text-red-500">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="https://wa.link/fap8ub" target="_blank" class="text-white hover:text-red-500">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com/mazda.bajio/profilecard/?igsh=MXN5eHF2ZHM3ZTBibw==" target="_blank"
+                    class="text-white hover:text-red-500">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
