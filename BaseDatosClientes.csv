@@ -1,0 +1,3 @@
+ID Cliente,Nombre,Teléfono,Correo,Tipo de Cliente,Estatus,Fecha de Contacto,Notas Adicionales
+1,Juan Pérez,1234567890,jp@mail.com,Viejo,En proceso,2024-12-19,Necesita financiamiento
+2,Ana Gómez,0987654321,ag@mail.com,Nuevo,Interesado,2024-12-18,Solicita modelo CX-5
