@@ -43,10 +43,10 @@
     <header class="bg-white shadow-md">
         <div class="container mx-auto flex justify-between items-center p-4">
             <div class="flex items-center">
-                 <a href="#top">
-                <img src="https://storage.googleapis.com/a1aa/image/f8hwdS2tl41ub6i8Xrug4TxfzmJWLfbwkfueND33TqNhpwveE.jpg"
-                    alt="Mazda Logo" class="h-12">
-                <span class="ml-2 text-xl font-bold text-gray-800">Mazda Querétaro</span>
+                <a href="#top">
+                    <img src="https://storage.googleapis.com/a1aa/image/f8hwdS2tl41ub6i8Xrug4TxfzmJWLfbwkfueND33TqNhpwveE.jpg"
+                        alt="Mazda Logo" class="h-12">
+                    <span class="ml-2 text-xl font-bold text-gray-800">Mazda Querétaro</span>
             </div>
             <nav class="space-x-6">
                 <a href="#about" class="text-gray-600 hover:text-red-500">Sobre Mí</a>
@@ -58,7 +58,7 @@
         </div>
     </header>
 
-        <!-- Hero Section -->
+    <!-- Hero Section -->
     <section class="bg-cover bg-center h-screen"
         style="background-image: url('https://storage.googleapis.com/a1aa/image/8f8f5d67-7efc-4eb9-8feb-6f39fa8e8d66.jpeg');">
         <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
@@ -83,8 +83,7 @@
                     perfecto que cumpla con tus necesidades y supere tus expectativas.</p>
             </div>
             <div class="md:w-1/2">
-                <img src="mami.jpg"
-                    alt="Vendedora profesional" class="rounded-lg shadow-lg">
+                <img src="mami.jpg" alt="Vendedora profesional" class="rounded-lg shadow-lg">
             </div>
         </div>
     </section>
@@ -228,17 +227,40 @@
             </div>
         </div>
     </section>
+    <style>
+        h2 {
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            margin-top: 10px;
+        }
+    </style>
 
     <!-- Contact Section -->
-    <section id="contactForm" class="py-20 bg-white">
+    <section id="contactForm" class="py-20 bg-white" style="height: 670px;">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-gray-800">Contacto</h2>
+            <h2 class="text-4xl font-bold text-gray-800" style="margin-bottom: 30px;">Contacto</h2>
             <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSeG24cgxDChBOpvwqctHALzZ9X5DMvaO3mJBfybIDNGOgc-vA/viewform?embedded=true"
                 width="500" height="503" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
         </div>
-        <iframe src="https://typebot.co/product-recommendation-swgn3g7"
-            style="border: none; width: 50%; height: 550px; float: right; margin-top: -500px;"></iframe>
+        <iframe src="https://typebot.co/atencionacliente"
+            style="border: none; width: 50%; height: 100%; margin-top: 0;"></iframe>
+
+        <style>
+            @media (min-width: 768px) {
+                iframe {
+                    width: 50%;
+                    float: left;
+                }
+            }
+        </style>
     </section>
 
     <!-- Footer -->
