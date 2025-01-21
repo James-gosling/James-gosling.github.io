@@ -243,30 +243,44 @@
     </style>
 
     <!-- Contact Section -->
-<section id="contactForm" class="py-20 bg-white" style="height: auto;">
-    <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold text-gray-800" style="margin-bottom: 30px;">Contacto</h2>
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSeG24cgxDChBOpvwqctHALzZ9X5DMvaO3mJBfybIDNGOgc-vA/viewform?embedded=true"
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;">Cargando…</iframe>
+    <section id="contactForm" class="py-20 bg-white" style="height: auto;">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-gray-800" style="margin-bottom: 30px;">Contacto</h2>
+            <div class="iframe-container">
+                <iframe src="https://typebot.co/atencionacliente" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
-    </div>
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-        <iframe src="https://typebot.co/atencionacliente"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"></iframe>
-    </div>
 
-    <style>
-        @media (min-width: 768px) {
-            #contactForm div {
-                width: 50%;
-                float: left;
-                padding-bottom: 28.125%; /* Adjusted for 16:9 aspect ratio */
+        <style>
+            .iframe-container {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%;
+                /* 16:9 aspect ratio */
+                height: 0;
+                overflow: hidden;
+                margin: 0 auto;
             }
-        }
-    </style>
-</section>
+
+            .iframe-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+            @media (min-width: 768px) {
+                .iframe-container {
+                    max-width: 800px;
+                    /* Set a maximum width for larger screens */
+                    padding-bottom: 45%;
+                    /* Adjusted for 16:9 aspect ratio */
+                }
+            }
+        </style>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 py-6">
