@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vendedora de Mazda en Querétaro</title>
-    <meta name="description" content="Tu vendedora de confianza para los mejores autos Mazda en Querétaro.">
+    <title>Erika Vertiz Mazda</title>
+    <meta name="description" content="Tu vendedora de confianza para autos Mazda en Querétaro.">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -28,6 +28,21 @@
             transform: scale(1.05);
         }
 
+        .rounded-spin {
+            border-radius: 50%;
+            animation: spin 5s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
         .feature-image {
             transition: transform 0.3s ease;
         }
@@ -35,7 +50,65 @@
         .feature-image:hover {
             transform: translateY(-10px);
         }
+
+        /* Typing Animation Styles */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blinking-cursor {
+
+            0%,
+            100% {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: rgba(246, 8, 8, 0.7);
+            }
+        }
+
+        .hero-subtitle {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid transparent;
+            color: white;
+            animation: typing 6s steps(61, end) forwards, blinking-cursor 0.7s infinite;
+            opacity: 1;
+            animation-delay: 2s;
+            animation-fill-mode: both;
+            max-width: 100%;
+            margin-bottom: 1rem;
+            animation-iteration-count: infinite;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Optional: Fade-in effect for hero section */
+        .hero-section {
+            opacity: 0;
+            animation: fadeIn 2020ms ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
     </style>
+
 </head>
 
 <body class="bg-gray-100">
@@ -45,33 +118,88 @@
             <div class="flex items-center">
                 <a href="#top">
                     <img src="https://storage.googleapis.com/a1aa/image/f8hwdS2tl41ub6i8Xrug4TxfzmJWLfbwkfueND33TqNhpwveE.jpg"
-                        alt="Mazda Logo" class="h-12">
+                        alt="Mazda Logo" class="h-12 rounded-spin">
                     <span class="ml-2 text-xl font-bold text-gray-800">Mazda Querétaro</span>
+                </a>
             </div>
             <nav class="space-x-6">
                 <a href="#about" class="text-gray-600 hover:text-red-500">Sobre Mí</a>
                 <a href="#services" class="text-gray-600 hover:text-red-500">Servicios</a>
                 <a href="#catalogo" class="text-gray-600 hover:text-red-500">Catálogo</a>
                 <a href="#testimonials" class="text-gray-600 hover:text-red-500">Testimonios</a>
-                <a href="#contactForm" class="text-gray-600 hover:text-red-500">Contacto</a>
+                <a href="#contact" class="text-gray-600 hover:text-red-500">Contacto</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-cover bg-center h-screen"
-        style="background-image: url('https://storage.googleapis.com/a1aa/image/8f8f5d67-7efc-4eb9-8feb-6f39fa8e8d66.jpeg');">
-        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
-            <div class="text-center text-white">
-                <h1 class="text-5xl font-bold">Bienvenidos a Mazda Querétaro</h1>
-                <p class="mt-4 text-lg">Encuentra el vehículo perfecto que cumpla con tus necesidades.</p>
 
-                <a href="#" class="cta-button mt-6 inline-block bg-red-500 text-white py-3 px-8 rounded-lg shadow-md"
-                    onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank', 'width=800,height=600'); return false;">Cotizar
-                    mi auto</a>
+    <!-- Hero Section -->
+    <section class="hero-section bg-cover bg-center h-screen relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden"> <!-- Wrapper for iframe -->
+            <div id="player" class="absolute top-0 left-0 w-full h-[calc(100%+200px)] -mt-[100px]"></div>
+        </div>
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-50 relative z-10">
+            <div class="hero-content text-center text-white">
+                <h1
+                    class="text-4xl font-bold text-white-800 transition duration-300 ease-in-out transform hover:scale-105 hover:text-red-600">
+                    Bienvenidos a Mazda Querétaro
+                </h1>
+                <div class="flex items-center justify-center space-x-4">
+                    <p class="mt-4 text-lg hero-subtitle">
+                        Encuentra el vehículo perfecto que cumpla con tus necesidades.
+                    </p>
+                </div>
+
+                <a href="#"
+                    class="cta-button mt-6 inline-block bg-red-500 transition duration-300 ease-in-out transform hover:scale-105 hover:text-black py-3 px-8 rounded-lg shadow-md"
+                    onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank', 'width=800,height=600'); return false;">
+                    Cotizar mi auto
+                </a>
             </div>
         </div>
     </section>
+
+    <script>
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Create an <iframe> (and YouTube player) after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '100%',
+                width: '100%',
+                videoId: 'vQ_UmQEOUeI',
+                playerVars: {
+                    'autoplay': 1,
+                    'mute': 1,
+                    'loop': 1,
+                    'playlist': 'vQ_UmQEOUeI'
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        // The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        // The API calls this function when the player's state changes.
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING) {
+                setTimeout(() => {
+                    player.seekTo(0);
+                }, 21800); // 20000 milliseconds = 20 seconds
+            }
+        }
+    </script>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-gray-100">
@@ -91,7 +219,7 @@
     <!-- Services Section -->
     <section id="services" class="py-20 bg-white">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-gray-800">Servicios</h2>
+            <h2 class="text-4xl font-bold text-gray-800 animate-float">Servicios</h2>
             <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
                 <a href="#catalogo" class="block p-6 bg-gray-100 rounded-lg shadow-md">
                     <img src="https://www.narcitymedia.com/hubfs/mazda.jpg" alt="Venta de Autos"
@@ -102,14 +230,14 @@
                 </a>
                 <a href="https://www.mazdafinancialservices.com/us/en.html" target="_blank"
                     class="block p-6 bg-gray-100 rounded-lg shadow-md">
-                    <img src="https://tse3.mm.bing.net/th?id=OIG3.vCJwqUZQnK0RvcmKmI9n&pid=ImgGn"
+                    <img src="https://storage.googleapis.com/a1aa/image/6SeJn1SDZhUCAyteOq8jJUPsFhYF1myX91bH7VIugMVLFernA.jpg"
                         alt="Opciones de Financiamiento" class="mx-auto feature-image">
                     <h3 class="mt-4 text-xl font-bold text-gray-800">Opciones de Financiamiento</h3>
                     <p class="mt-2 text-gray-600">Obtén soluciones de financiamiento flexibles y adaptadas a tu
                         presupuesto.</p>
                 </a>
-                <a href="tel:+524424753837" class="block p-6 bg-gray-100 rounded-lg shadow-md">
-                    <img src="https://tse1.mm.bing.net/th?id=OIG4.ool..0y8W8GhhMB32SRQ&pid=ImgGn"
+                <a href="tel:4424753837" class="block p-6 bg-gray-100 rounded-lg shadow-md">
+                    <img src="https://storage.googleapis.com/a1aa/image/GffHxqctdfEdaoFMQyQVfvewdaIsd00wl7buAR004fkZVhf6JA.jpg"
                         alt="Soporte al Cliente" class="mx-auto feature-image">
                     <h3 class="mt-4 text-xl font-bold text-gray-800">Soporte al Cliente</h3>
                     <p class="mt-2 text-gray-600">Asistencia profesional antes, durante y después de tu compra.</p>
@@ -118,168 +246,580 @@
         </div>
     </section>
 
+    <style>
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+    <style>
+        /* 3D Hover Effect */
+        .car-card {
+            transition: all 0.3s ease-in-out;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Image Zoom Effect */
+        .car-card img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .car-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Stagger Animation */
+        .car-card {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Individual Card Delays */
+        .car-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .car-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .car-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .car-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .car-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .car-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .car-card:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .car-card:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .car-card:nth-child(9) {
+            animation-delay: 0.9s;
+        }
+
+        /* Hover Button Effect */
+        .car-card button {
+            transition: all 0.3s ease;
+        }
+
+        .car-card button:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* Typing Animation Styles */
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        .typing-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        .typing-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid transparent;
+            /* Make cursor transparent */
+            animation: typing 4s steps(50, end) forwards, blink-caret 0.75s step-end infinite;
+            /* Typing and blinking cursor */
+            max-width: 100%;
+            animation-delay: 0s;
+            /* Start immediately */
+            animation-iteration-count: infinite;
+            /* Repeat indefinitely */
+        }
+
+        @keyframes blink-caret {
+            50% {
+                border-color: transparent;
+                /* Blink effect */
+            }
+        }
+
+        .subtitle-typing {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid transparent;
+            /* Make cursor transparent */
+            animation: typing 5s steps(50, end) forwards, blink-caret 0.75s step-end infinite;
+            /* Typing and blinking cursor */
+            opacity: 1;
+            animation-delay: 3s;
+            /* Delay before starting */
+            animation-iteration-count: infinite;
+            /* Repeat indefinitely */
+            color: #4a5568;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            max-width: 100%;
+        }
+
+        .typing-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+    <script>
+        function animateSubtitle() {
+            const subtitle = document.getElementById('hero-subtitle');
+            subtitle.classList.add('subtitle-typing');
+            setTimeout(() => {
+                subtitle.classList.remove('subtitle-typing');
+            }, 10000); // Duration of the animation
+        }
+
+        // Initial animation
+        animateSubtitle();
+
+        // Repeat the animation every 1 minute (60000 milliseconds)
+        setInterval(animateSubtitle, 60000);
+    </script>
+
     <!-- Catalog Section -->
     <section id="catalogo" class="py-20 bg-gray-100">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-gray-800">Catálogo de Autos Mazda</h2>
-            <p class="mt-4 text-gray-600">Explora nuestra amplia gama de vehículos Mazda para cada estilo de vida.</p>
-            <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda2-sedan/configura-3.0/exteriores/signature/46v-rojo-brillante/mazda2-sedan-configura-signature-rojo-v1-36.jpg"
-                        alt="Mazda 2 Sedán" class="rounded-lg mx-auto">
-                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda 2 Sedán</h3>
-                    <p class="text-gray-600">Desde $330,900 MXN</p>
-                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda2-sedan/ficha-tecnica/ficha-tecnica-mazda2-sedan-2025-v01.pdf"
-                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
+            <div class="typing-container">
+                <h2 class="text-4xl font-bold text-gray-800 typing-text">Catálogo de Autos Mazda</h2>
+                <div class="typing-container">
+                    <p class="mt-4 text-gray-600 subtitle-typing">Explora nuestra amplia gama de vehículos Mazda para
+                        cada estilo de vida.</p>
+                    <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
+
+                        <!-- Mazda 2 Sedán -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda2-sedan/configura-3.0/exteriores/signature/46v-rojo-brillante/mazda2-sedan-configura-signature-rojo-v1-36.jpg"
+                                alt="Mazda 2 Sedán" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda 2 Sedán</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $330,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda2-sedan/ficha-tecnica/ficha-tecnica-mazda2-sedan-2025-v01.pdf"
+                                        target="_blank"
+                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        Ficha técnica
+                                    </a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mazda 2 Hatchback -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://storage.googleapis.com/a1aa/image/7b721e88-8b8d-4d20-ae39-ee7f6b1c9f91.jpeg"
+                                alt="Mazda 2 Hatchback" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda 2 Hatchback</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $345,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda2-hatchback/ficha-tecnica/ficha-tecnica-mazda2-hatchback-2025-v01.pdf"
+                                        target="_blank"
+                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        Ficha técnica
+                                    </a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mazda 3 Sedán -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda3-sedan/configura-v.3/exteriores/signature/rojo-brillante/mazda3-sedan-signature-rojo-v1-36.jpg"
+                                alt="Mazda 3 Hatchback" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda 3 Sedán</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $420,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda3-sedan/ficha-tecnica/ficha-tecnica-mazda3-sedan-2025-v01.pdf"
+                                        target="_blank"
+                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        Ficha técnica
+                                    </a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mazda 3 Hatchback -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://storage.googleapis.com/a1aa/image/e0d006ce-3921-433f-bba2-2783a94699bb.jpeg"
+                                alt="Mazda 3 Hatchback" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda 3 Hatchback</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $430,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda3-hatchback/ficha-tecnica/ficha-tecnica-mazda3-hatchback-2025-v01.pdf"
+                                        target="_blank"
+                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        Ficha técnica
+                                    </a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mazda CX-30 -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://storage.googleapis.com/a1aa/image/51703f2c-6709-402c-b601-d5610bf6403c.jpeg"
+                                alt="Mazda CX-30" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-30</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $480,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-30/ficha-tecnica/ficha-tecnica-mazda-cx-30-2025-v02.pdf"
+                                        target="_blank"
+                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        Ficha técnica
+                                    </a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mazda CX-5 -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://storage.googleapis.com/a1aa/image/127c46bd-50c6-4002-8707-9faf46d3a2fd.jpeg"
+                                alt="Mazda CX-5" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-5</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $570,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-5/ficha-tecnica/ficha-tecnica-mazda-cx-5-2025-v01.pdf"
+                                        target="_blank"
+                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        Ficha técnica
+                                    </a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mazda CX-50 -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda-cx-50/configura-v.3/exteriores/signature/48t-arena/mazda-cx-50-configura-arena-v2-36.jpg"
+                                alt="Mazda CX-50" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-50</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $650,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-50/ficha-tecnica/ficha-tecnica-mazda-cx-50-2025-v01.pdf"
+                                        target="_blank"
+                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        Ficha técnica
+                                    </a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mazda CX-70 -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda-cx-70/360/colores/negro-celeste/mazda-cx-70-negro-celeste-v1-24.jpg"
+                                alt="Mazda CX-70" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-70</h3 ```html <p
+                                    class="text-red-600 font-semibold mb-4">Desde $700,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-70/ficha-tecnica/ficha-tecnica-mazda-cx-70-2025-v01.pdf"
+                                        target="_blank"
+                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        Ficha técnica
+                                    </a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mazda CX-90 -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda-cx-90/configura-v3/exteriores/rojo-artesano/mazda-cx-90-configura-rojo-artesano-v2-36.jpg"
+                                alt="Mazda CX-90" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-90</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $850,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-90/ficha-tecnica/ficha-tecnica-mazda-cx-90-2025-v01.pdf"
+                                        target="_blank"
+                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        Ficha técnica
+                                    </a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                        Cotizar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <img src="https://storage.googleapis.com/a1aa/image/7b721e88-8b8d-4d20-ae39-ee7f6b1c9f91.jpeg"
-                        alt="Mazda 2 Hatchback" class="rounded-lg mx-auto">
-                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda 2 Hatchback</h3>
-                    <p class="text-gray-600">Desde $345,900 MXN</p>
-                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda2-hatchback/ficha-tecnica/ficha-tecnica-mazda2-hatchback-2025-v01.pdf"
-                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda3-sedan/configura-v.3/exteriores/signature/rojo-brillante/mazda3-sedan-signature-rojo-v1-36.jpg"
-                        alt="Mazda 3 Sedán" class="rounded-lg mx-auto">
-                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda 3 Sedán</h3>
-                    <p class="text-gray-600">Desde $420,900 MXN</p>
-                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda3-sedan/ficha-tecnica/ficha-tecnica-mazda3-sedan-2025-v01.pdf"
-                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <img src="https://storage.googleapis.com/a1aa/image/e0d006ce-3921-433f-bba2-2783a94699bb.jpeg"
-                        alt="Mazda 3 Hatchback" class="rounded-lg mx-auto">
-                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda 3 Hatchback</h3>
-                    <p class="text-gray-600">Desde $430,900 MXN</p>
-                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda3-hatchback/ficha-tecnica/ficha-tecnica-mazda3-hatchback-2025-v01.pdf"
-                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <img src="https://storage.googleapis.com/a1aa/image/51703f2c-6709-402c-b601-d5610bf6403c.jpeg"
-                        alt="Mazda CX-30" class="rounded-lg mx-auto">
-                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda CX-30</h3>
-                    <p class="text-gray-600">Desde $480,900 MXN</p>
-                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-30/ficha-tecnica/ficha-tecnica-mazda-cx-30-2025-v02.pdf"
-                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <img src="https://storage.googleapis.com/a1aa/image/127c46bd-50c6-4002-8707-9faf46d3a2fd.jpeg"
-                        alt="Mazda CX-5" class="rounded-lg mx-auto">
-                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda CX-5</h3>
-                    <p class="text-gray-600">Desde $570,900 MXN</p>
-                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-5/ficha-tecnica/ficha-tecnica-mazda-cx-5-2025-v01.pdf"
-                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda-cx-50/configura-v.3/exteriores/signature/48t-arena/mazda-cx-50-configura-arena-v2-36.jpg"
-                        alt="Mazda CX-50" class="rounded-lg mx-auto">
-                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda CX-50</h3>
-                    <p class="text-gray-600">Desde $650,900 MXN</p>
-                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-50/ficha-tecnica/ficha-tecnica-mazda-cx-50-2025-v01.pdf"
-                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda-cx-70/360/colores/negro-celeste/mazda-cx-70-negro-celeste-v1-24.jpg"
-                        alt="Mazda CX-70" class="rounded-lg mx-auto">
-                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda CX-70</h3>
-                    <p class="text-gray-600">Desde $700,900 MXN</p>
-                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-70/ficha-tecnica/ficha-tecnica-mazda-cx-70-2025-v01.pdf"
-                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
-                </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
-                    <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda-cx-90/configura-v3/exteriores/rojo-artesano/mazda-cx-90-configura-rojo-artesano-v2-36.jpg"
-                        alt="Mazda CX-90" class="rounded-lg mx-auto">
-                    <h3 class="text-xl font-bold text-gray-800 mt-4">Mazda CX-90</h3>
-                    <p class="text-gray-600">Desde $850,900 MXN</p>
-                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-90/ficha-tecnica/ficha-tecnica-mazda-cx-90-2025-v01.pdf"
-                        target="_blank" class="text-red-500 hover:underline">Ficha técnica</a>
-                </div>
-            </div>
-        </div>
+                <!-- console.log('Header loaded');
+        console.log('Hero Section loaded');
+        console.log('About Section loaded');
+        console.log('Services Section loaded');
+        console.log('Catalog Section loaded');
+        console.log('Testimonials Section loaded');
+        console.log('Contact Section loaded');
+        console.log('Footer loaded');console.log('Header loaded'); -->
+
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const typingText = document.querySelector('.typing-text');
+            const subtitleText = document.querySelector('.subtitle-typing');
+
+            // Restart animation on page reload or revisit
+            const resetAnimation = (element) => {
+                element.style.animation = 'none';
+                void element.offsetWidth; // Trigger reflow
+                element.style.animation = '';
+            };
+
+            resetAnimation(typingText);
+            resetAnimation(subtitleText);
+        });
+    </script>
+
+    <style>
+        /* Testimonial Card Animations */
+        .testimonial-card {
+            transition: all 0.4s ease-in-out;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-15px) rotateX(5deg) rotateY(5deg) scale(1.05);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Client Image Animation */
+        .testimonial-card img {
+            transition: all 0.3s ease-in-out;
+            border: 3px solid transparent;
+        }
+
+        .testimonial-card:hover img {
+            transform: scale(1.1) rotate(5deg);
+            border-color: #e53e3e;
+            /* Tailwind red-600 */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Quote Animation */
+        .testimonial-card p:first-of-type {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover p:first-of-type {
+            transform: translateX(10px);
+            color: #4a5568;
+            /* Tailwind gray-700 */
+        }
+
+        /* Stagger Animation */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .testimonial-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .testimonial-card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .testimonial-card:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        /* Quote Marks Effect */
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(229, 62, 62, 0.1);
+            /* Tailwind red-500 with opacity */
+            z-index: 1;
+        }
+    </style>
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-20 bg-gray-100">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-gray-800">Testimonios</h2>
+            <h2
+                class="text-4xl font-bold text-gray-800 transition duration-300 ease-in-out transform hover:scale-105 hover:text-red-600">
+                Testimonios</h2>
             <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
-                <div class="p-6 bg-white rounded-lg shadow-md">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card relative p-8 bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="absolute inset-0 bg-red-50 opacity-0 hover:opacity-10 transition-all duration-300">
+                    </div>
                     <img src="https://storage.googleapis.com/a1aa/image/fb27e664-f581-4495-a114-e128731a291d.jpeg"
-                        alt="Cliente 1" class="mx-auto rounded-full">
-                    <p class="mt-4 text-gray-600">"¡La mejor experiencia al comprar mi auto! Altamente recomendable."
-                    </p>
-                    <p class="mt-2 font-bold text-gray-800">- Juan Pérez</p>
+                        alt="Cliente 1"
+                        class="w-32 h-32 mx-auto rounded-full object-cover mb-4 transform transition-transform">
+                    <p class="mt-4 text-gray-600 relative z-10">"¡La mejor experiencia al comprar mi auto! Altamente
+                        recomendable."</p>
+                    <p class="mt-2 font-bold text-gray-800 relative z-10">- Juan Pérez</p>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card relative p-8 bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="absolute inset-0 bg-red-50 opacity-0 hover:opacity-10 transition-all duration-300">
+                    </div>
                     <img src="https://storage.googleapis.com/a1aa/image/76471f39-7530-4139-8934-99b66d4fd34c.jpeg"
-                        alt="Cliente 2" class="mx-auto rounded-full">
-                    <p class="mt-4 text-gray-600">"Excelentes ofertas y un servicio impecable."</p>
-                    <p class="mt-2 font-bold text-gray-800">- María López</p>
+                        alt="Cliente 2"
+                        class="w-32 h-32 mx-auto rounded-full object-cover mb-4 transform transition-transform">
+                    <p class="mt-4 text-gray-600 relative z-10">"Excelentes ofertas y un servicio impecable."</p>
+                    <p class="mt-2 font-bold text-gray-800 relative z-10">- María López</p>
                 </div>
-                <div class="p-6 bg-white rounded-lg shadow-md">
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card relative p-8 bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="absolute inset-0 bg-red-50 opacity-0 hover:opacity-10 transition-all duration-300">
+                    </div>
                     <img src="https://storage.googleapis.com/a1aa/image/65c62d22-8eb5-4dea-b7dc-6935b7daf0a4.jpeg"
-                        alt="Cliente 3" class="mx-auto rounded-full">
-                    <p class="mt-4 text-gray-600">"Hicieron que el proceso de compra fuera sencillo y agradable."</p>
-                    <p class="mt-2 font-bold text-gray-800">- Miguel Hernández</p>
+                        alt="Cliente 3"
+                        class="w-32 h-32 mx-auto rounded-full object-cover mb-4 transform transition-transform">
+                    <p class="mt-4 text-gray-600 relative z-10">"Hicieron que el proceso de compra fuera sencillo y
+                        agradable."</p>
+                    <p class="mt-2 font-bold text-gray-800 relative z-10">- Miguel Hernández</p>
                 </div>
             </div>
         </div>
     </section>
-    <style>
-        h2 {
-            position: relative;
-        }
 
-        h2::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 2px;
-            background-color: black;
-            margin-top: 10px;
-        }
-    </style>
+    <script>
+        // Optional: Intersection Observer for scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeInUp');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
 
+            document.querySelectorAll('.testimonial-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
     <!-- Contact Section -->
-    <section id="contactForm" class="py-20 bg-white" style="height: auto;">
+
+    <section id="contactForm" class="py-20 bg-white">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-gray-800" style="margin-bottom: 30px;">Contacto</h2>
-            <div class="iframe-container">
-                <iframe src="https://typebot.co/atencionacliente" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <h2 class="text-4xl font-bold text-gray-800">Contacto</h2>
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeG24cgxDChBOpvwqctHALzZ9X5DMvaO3mJBfybIDNGOgc-vA/viewform?embedded=true"
+                width="500" height="503" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
         </div>
-
-        <style>
-            .iframe-container {
-                position: relative;
-                width: 100%;
-                padding-bottom: 56.25%;
-                /* 16:9 aspect ratio */
-                height: 0;
-                overflow: hidden;
-                margin: 0 auto;
-            }
-
-            .iframe-container iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border: none;
-            }
-
-            @media (min-width: 768px) {
-                .iframe-container {
-                    max-width: 800px;
-                    /* Set a maximum width for larger screens */
-                    padding-bottom: 45%;
-                    /* Adjusted for 16:9 aspect ratio */
-                }
-            }
-        </style>
+        <iframe src="https://typebot.co/atencionacliente"
+            style="border: none; width: 50%; height: 550px; float: right; margin-top: -500px;"></iframe>
     </section>
 
     <!-- Footer -->
