@@ -117,8 +117,8 @@
         <div class="container mx-auto flex justify-between items-center p-4">
             <div class="flex items-center">
                 <a href="#top">
-                    <img src="https://live.staticflickr.com/65535/54348959949_470bfcd4df.jpg"
-                        alt="Mazda Logo" class="h-12 rounded-spin">
+                    <img src="https://live.staticflickr.com/65535/54348959949_470bfcd4df.jpg" alt="Mazda Logo"
+                        class="h-12 rounded-spin">
                     <span class="ml-2 text-xl font-bold text-gray-800">EVM by Erika Vertiz</span>
                 </a>
             </div>
@@ -159,7 +159,7 @@
         </div>
     </section>
 
-        <script>
+    <script>
         // Load the IFrame Player API code asynchronously.
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
@@ -207,11 +207,15 @@
         <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
             <div class="md:w-1/2">
                 <h2 class="text-4xl font-bold text-gray-800">Sobre Mí</h2>
-                <p class="mt-4 text-gray-600">Soy una vendedora apasionada con más de 10 años de experiencia en la industria automotriz, y mi especialidad son los vehículos Mazda. Mi profundo conocimiento de la marca, sus modelos y características me permite ofrecerte una asesoría personalizada y de alta calidad. Ya sea que estés buscando un auto deportivo, un sedán elegante o una SUV familiar, te guiaré en el proceso de selección para que encuentres el Mazda perfecto que se ajuste a tu estilo de vida y necesidades.</p>
+                <p class="mt-4 text-gray-600">Soy una vendedora apasionada con más de 10 años de experiencia en la
+                    industria automotriz, y mi especialidad son los vehículos Mazda. Mi profundo conocimiento de la
+                    marca, sus modelos y características me permite ofrecerte una asesoría personalizada y de alta
+                    calidad. Ya sea que estés buscando un auto deportivo, un sedán elegante o una SUV familiar, te
+                    guiaré en el proceso de selección para que encuentres el Mazda perfecto que se ajuste a tu estilo de
+                    vida y necesidades.</p>
             </div>
             <div class="md:w-1/2">
-                
-                <img src="MAMI.jpg" alt="Vendedora profesional" class="rounded-lg shadow-lg">
+                <img src="https://imgur.com/BVxmZEn" alt="Vendedora profesional" class="rounded-lg shadow-lg">
             </div>
         </div>
     </section>
@@ -223,15 +227,16 @@
             <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
                 <a href="#catalogo" class="block p-6 bg-gray-100 rounded-lg shadow-md">
                     <img src="https://live.staticflickr.com/65535/54348359977_b9fe50fa6c.jpg" alt="Venta de Autos"
-                        class="mx-auto feature-image rounded-2xl"> 
+                        class="mx-auto feature-image rounded-2xl"> <!-- Cambiado a rounded-2xl -->
                     <h3 class="mt-4 text-xl font-bold text-gray-800">Venta de Autos</h3>
                     <p class="mt-2 text-gray-600">Encuentra la mejor selección de vehículos Mazda nuevos y seminuevos.
                     </p>
                 </a>
                 <a href="https://www.mazdafinancialservices.com/us/en.html" target="_blank"
                     class="block p-6 bg-gray-100 rounded-lg shadow-md">
-                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/45/74/4f/45744f81-e89c-350c-2412-2d551914fe57/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg"
+                    <img src="https://live.staticflickr.com/65535/54359689535_bc41cb2ab2.jpg"
                         alt="Opciones de Financiamiento" class="mx-auto feature-image rounded-2xl">
+                    <!-- Cambiado a rounded-2xl -->
                     <h3 class="mt-4 text-xl font-bold text-gray-800">Opciones de Financiamiento</h3>
                     <p class="mt-2 text-gray-600">Obtén soluciones de financiamiento flexibles y adaptadas a tu
                         presupuesto.</p>
@@ -445,7 +450,7 @@
                                 alt="Mazda 2 Sedán" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda 2 Sedán</h3>
-                                <p class="text-red-600 font-semibold mb-4">Desde $330,900 MXN</p>
+                                <p class="text-red-600 font-semibold mb-4">Desde $310,900 MXN</p>
                                 <div class="flex justify-between items-center">
                                     <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda2-sedan/ficha-tecnica/ficha-tecnica-mazda2-sedan-2025-v01.pdf"
                                         target="_blank"
@@ -459,15 +464,42 @@
                                         Cotizar
                                     </button>
                                 </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsMazda2S')">Versiones</h4>
+                                    <div id="versionsMazda2S" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I</h5>
+                                            <!-- precio version automatica -->
+                                            <p class="text-red-600 font-semibold">$310,900 MXN</p>
+                                            <!-- precio versión manual 300,900 MXN -->
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I Sport</h5>
+                                            <!-- precio version automatica -->
+                                            <p class="text-red-600 font-semibold">$340,900 MXN</p>
+                                            <!-- precio versión manual 330,900 MXN -->
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> Grand Touring</h5>
+                                            <p class="text-red-600 font-semibold">$370,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> Signature</h5>
+                                            <p class="text-red-600 font-semibold">$398,900 MXN</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                         <!-- Mazda 2 Hatchback -->
                         <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
-                            <img src="https://storage.googleapis.com/a1aa/image/7b721e88-8b8d-4d20-ae39-ee7f6b1c9f91.jpeg"
+                            <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2023/mazda2-hatchback/galeria/mazda2hb-2023-galeria-01.jpg"
                                 alt="Mazda 2 Hatchback" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda 2 Hatchback</h3>
-                                <p class="text-red-600 font-semibold mb-4">Desde $345,900 MXN</p>
+                                <p class="text-red-600 font-semibold mb-4">Desde $340,900 MXN</p>
                                 <div class="flex justify-between items-center">
                                     <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda2-hatchback/ficha-tecnica/ficha-tecnica-mazda2-hatchback-2025-v01.pdf"
                                         target="_blank"
@@ -481,15 +513,42 @@
                                         Cotizar
                                     </button>
                                 </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsMazda2H')">Versiones</h4>
+                                    <div id="versionsMazda2H" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I Sport</h5>
+                                            <!-- precio version automatica -->
+                                            <p class="text-red-600 font-semibold">$340,900 MXN</p>
+                                            <!-- precio versión PM 330,900 MXN -->
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> Grand Touring</h5>
+                                            <p class="text-red-600 font-semibold">$370,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> Signature</h5>
+                                            <p class="text-red-600 font-semibold">$398,900 MXN</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <script>
+                            function toggleVersions(versionId) {
+                                const versions = document.getElementById(versionId);
+                                versions.classList.toggle('hidden');
+                            }
+                        </script>
                         <!-- Mazda 3 Sedán -->
                         <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
                             <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda3-sedan/configura-v.3/exteriores/signature/rojo-brillante/mazda3-sedan-signature-rojo-v1-36.jpg"
                                 alt="Mazda 3 Hatchback" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda 3 Sedán</h3>
-                                <p class="text-red-600 font-semibold mb-4">Desde $420,900 MXN</p>
+                                <p class="text-red-600 font-semibold mb-4">Desde $412,900 MXN</p>
                                 <div class="flex justify-between items-center">
                                     <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda3-sedan/ficha-tecnica/ficha-tecnica-mazda3-sedan-2025-v01.pdf"
                                         target="_blank"
@@ -503,16 +562,42 @@
                                         Cotizar
                                     </button>
                                 </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsMazda3S')">Versiones</h4>
+                                    <div id="versionsMazda3S" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I </h5>
+                                            <!-- precio version automatica -->
+                                            <p class="text-red-600 font-semibold">$412,900 MXN</p>
+                                            <!-- precio versión PM 403,900 MXN -->
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I Sport</h5>
+                                            <!-- precio version automatica -->
+                                            <p class="text-red-600 font-semibold">$442,900 MXN</p>
+                                            <!-- precio versión PM 330,900 MXN -->
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> Grand Touring</h5>
+                                            <p class="text-red-600 font-semibold">$482,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> Signature Turbo</h5>
+                                            <p class="text-red-600 font-semibold">$552,900 MXN</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Mazda 3 Hatchback -->
                         <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
-                            <img src="https://storage.googleapis.com/a1aa/image/e0d006ce-3921-433f-bba2-2783a94699bb.jpeg"
+                            <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda3-hatchback/versiones/mazda3-hatchback-versiones-i-sport-v1.png"
                                 alt="Mazda 3 Hatchback" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda 3 Hatchback</h3>
-                                <p class="text-red-600 font-semibold mb-4">Desde $430,900 MXN</p>
+                                <p class="text-red-600 font-semibold mb-4">Desde $458,900 MXN</p>
                                 <div class="flex justify-between items-center">
                                     <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda3-hatchback/ficha-tecnica/ficha-tecnica-mazda3-hatchback-2025-v01.pdf"
                                         target="_blank"
@@ -526,39 +611,107 @@
                                         Cotizar
                                     </button>
                                 </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsMazda3H')">Versiones</h4>
+                                    <div id="versionsMazda3H" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I Sport</h5>
+                                            <!-- precio version automatica -->
+                                            <p class="text-red-600 font-semibold">$458,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I GT</h5>
+                                            <!-- precio version automatica -->
+                                            <p class="text-red-600 font-semibold">$498,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> Signature</h5>
+                                            <!-- precio version automatica -->
+                                            <p class="text-red-600 font-semibold">$568,900 MXN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mazda CX-3 -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://storage.googleapis.com/a1aa/image/51703f2c-6709-402c-b601-d5610bf6403c.jpeg"
+                                alt="Mazda CX-3" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-3</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $391,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-30/ficha-tecnica/ficha-tecnica-mazda-cx-30-2025-v02.pdf"
+                                        target="_blank" class="text-red-500 hover:text-red-600">Ficha técnica</a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg">Cotizar</button>
+                                </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsCX3')">Versiones</h4>
+                                    <div id="versionsCX3" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I</h5>
+                                            <p class="text-red-600 font-semibold">$391,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I Sport</h5>
+                                            <p class="text-red-600 font-semibold">$421,900 MXN</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Mazda CX-30 -->
                         <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
-                            <img src="https://storage.googleapis.com/a1aa/image/51703f2c-6709-402c-b601-d5610bf6403c.jpeg"
+                            <img src="https://www.motorbiscuit.com/wp-content/uploads/2021/02/Mazda-CX-30-scaled.jpg"
                                 alt="Mazda CX-30" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-30</h3>
-                                <p class="text-red-600 font-semibold mb-4">Desde $480,900 MXN</p>
+                                <p class="text-red-600 font-semibold mb-4">Desde $441,900 MXN</p>
                                 <div class="flex justify-between items-center">
                                     <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-30/ficha-tecnica/ficha-tecnica-mazda-cx-30-2025-v02.pdf"
-                                        target="_blank"
-                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
-                                        <i class="fas fa-file-pdf mr-2"></i>
-                                        Ficha técnica
-                                    </a>
+                                        target="_blank" class="text-red-500 hover:text-red-600">Ficha técnica</a>
                                     <button
                                         onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
-                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
-                                        Cotizar
-                                    </button>
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg">Cotizar</button>
+                                </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsCX30')">Versiones</h4>
+                                    <div id="versionsCX30" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I</h5>
+                                            <p class="text-red-600 font-semibold">$441,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I Sport</h5>
+                                            <p class="text-red-600 font-semibold">$471,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I Grand Touring</h5>
+                                            <p class="text-red-600 font-semibold">$517,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> Signature Turbo</h5>
+                                            <p class="text-red-600 font-semibold">$557,900 MXN</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Mazda CX-5 -->
                         <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
-                            <img src="https://storage.googleapis.com/a1aa/image/127c46bd-50c6-4002-8707-9faf46d3a2fd.jpeg"
+                            <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda-cx-5/vlp/galeria/mazda-cx-5-galeria-v1-06.jpg"
                                 alt="Mazda CX-5" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-5</h3>
-                                <p class="text-red-600 font-semibold mb-4">Desde $570,900 MXN</p>
+                                <p class="text-red-600 font-semibold mb-4">Desde $511,900 MXN</p>
                                 <div class="flex justify-between items-center">
                                     <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-5/ficha-tecnica/ficha-tecnica-mazda-cx-5-2025-v01.pdf"
                                         target="_blank"
@@ -572,6 +725,24 @@
                                         Cotizar
                                     </button>
                                 </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsCX5')">Versiones</h4>
+                                    <div id="versionsCX5" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> I Sport</h5>
+                                            <p class="text-red-600 font-semibold">$511,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> Grand Touring</h5>
+                                            <p class="text-red-600 font-semibold">$611,900 MXN</p>
+                                        </div>
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800"> Signature</h5>
+                                            <p class="text-red-600 font-semibold">$681,900 MXN</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -581,7 +752,7 @@
                                 alt="Mazda CX-50" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-50</h3>
-                                <p class="text-red-600 font-semibold mb-4">Desde $650,900 MXN</p>
+                                <p class="text-red-600 font-semibold mb-4">Desde $818,900 MXN</p>
                                 <div class="flex justify-between items-center">
                                     <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-50/ficha-tecnica/ficha-tecnica-mazda-cx-50-2025-v01.pdf"
                                         target="_blank"
@@ -595,16 +766,27 @@
                                         Cotizar
                                     </button>
                                 </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsMazda50')">Versiones</h4>
+                                    <div id="versionsMazda50" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800">Signature</h5>
+                                            <p class="text-red-600 font-semibold">$818,900 MXN</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
 
                         <!-- Mazda CX-70 -->
                         <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
                             <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda-cx-70/360/colores/negro-celeste/mazda-cx-70-negro-celeste-v1-24.jpg"
                                 alt="Mazda CX-70" class="w-full h-48 object-cover">
                             <div class="p-6">
-                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-70</h3 ```html <p
-                                    class="text-red-600 font-semibold mb-4">Desde $700,900 MXN</p>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-70</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $961,900 MXN</p>
                                 <div class="flex justify-between items-center">
                                     <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-70/ficha-tecnica/ficha-tecnica-mazda-cx-70-2025-v01.pdf"
                                         target="_blank"
@@ -618,6 +800,16 @@
                                         Cotizar
                                     </button>
                                 </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsMazda70')">Versiones</h4>
+                                    <div id="versionsMazda70" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800">Grand Touring</h5>
+                                            <p class="text-red-600 font-semibold">$961,900 MXN</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -627,7 +819,7 @@
                                 alt="Mazda CX-90" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda CX-90</h3>
-                                <p class="text-red-600 font-semibold mb-4">Desde $850,900 MXN</p>
+                                <p class="text-red-600 font-semibold mb-4">Desde $1'061,000 MXN</p>
                                 <div class="flex justify-between items-center">
                                     <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-90/ficha-tecnica/ficha-tecnica-mazda-cx-90-2025-v01.pdf"
                                         target="_blank"
@@ -641,8 +833,51 @@
                                         Cotizar
                                     </button>
                                 </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsMazda90')">Versiones</h4>
+                                    <div id="versionsMazda90" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800">Signature</h5>
+                                            <p class="text-red-600 font-semibold">$1'061,000 MXN</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <!-- Mazda BT-50 -->
+                        <div class="car-card bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://www.mazda.mx/siteassets/mazda-mx/mycos-2025/mazda-bt-50/refresh/vlp/syt/mazda-bt-50-seguridad-tecnologia-v1.jpg"
+                                alt="Mazda BT-50" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Mazda BT-50</h3>
+                                <p class="text-red-600 font-semibold mb-4">Desde $829,900 MXN</p>
+                                <div class="flex justify-between items-center">
+                                    <a href="https://www.mazda.mx/siteassets/descargables-2025/mazda-cx-90/ficha-tecnica/ficha-tecnica-mazda-cx-90-2025-v01.pdf"
+                                        target="_blank"
+                                        class="text-red-500 hover:text-red-600 font-medium flex items-center">
+                                        <i class="fas fa-file-pdf mr-2"></i>
+                                        Ficha técnica
+                                    </a>
+                                    <button
+                                        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeu52UKlEvExd3gAGaZbIfm8efXAYwQkriHOHLQmEr_C5z5gQ/viewform', '_blank')"
+                                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">
+                                        Cotizar
+                                    </button>
+                                </div>
+                                <div class="mt-4">
+                                    <h4 class="text-xl font-bold text-gray-800 mb-2 cursor-pointer"
+                                        onclick="toggleVersions('versionsMazdabt50')">Versiones</h4>
+                                    <div id="versionsMazdabt50" class="grid grid-cols-1 md:grid-cols-2 gap-4 hidden">
+                                        <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                                            <h5 class="text-lg font-semibold text-gray-800">Versión 1</h5>
+                                            <p class="text-red-600 font-semibold">$829,900 MXN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
@@ -809,7 +1044,7 @@
             });
         });
     </script>
-    
+
     <!-- Contact Section -->
     <section id="contactForm" class="py-20 bg-white">
         <h2 class="text-4xl font-bold text-gray-800 text-center">Contacto</h2>
