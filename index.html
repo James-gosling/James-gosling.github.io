@@ -152,13 +152,12 @@
         </div>
     </header>
 
-
     <!-- Hero Section -->
     <section class="hero-section bg-cover bg-center h-screen relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full overflow-hidden"> <!-- Wrapper for video -->
-            <video id="bgVideo" autoplay muted loop
+            <video id="bgVideo" autoplay muted loop playsinline
                 class="absolute top-0 left-0 w-full h-[calc(100%+200px)] -mt-[100px] object-cover">
-                <source src="https://drive.google.com/uc?export=download&id=1wVDPwRfpZD3oel_VZTr9Ozd1YXQ7KAh3"
+                <source src="https://res.cloudinary.com/ds5irxbbl/video/upload/v1742833908/piiklqtjymcw1badj0g9.mp4"
                     type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
@@ -183,31 +182,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Remove the YouTube script since we're using HTML5 video -->
-    <script>
-        // Make sure the video properly fills the container on different screen sizes
-        document.addEventListener('DOMContentLoaded', function () {
-            const video = document.getElementById('bgVideo');
-
-            function handleVideoSize() {
-                const windowRatio = window.innerWidth / window.innerHeight;
-                const videoRatio = video.videoWidth / video.videoHeight;
-
-                if (windowRatio > videoRatio) {
-                    video.style.width = '100%';
-                    video.style.height = 'auto';
-                } else {
-                    video.style.width = 'auto';
-                    video.style.height = '100%';
-                }
-            }
-
-            // Run once and then on resize
-            window.addEventListener('resize', handleVideoSize);
-            video.addEventListener('loadedmetadata', handleVideoSize);
-        });
-    </script>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-gray-100">
